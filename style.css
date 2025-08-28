@@ -1,0 +1,197 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #51346b;
+  --color-text-main: #FFFFFF;
+  --color-text-header: #FFFFFF;
+  --color-primary: #FFFF00;
+  --wrapper-height: 100px;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "Roboto";
+  --font-family-header: "Roboto";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+
+
+/* Our remix on glitch button */
+
+
+/* Navigation grid */
+
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: HK Grotesk,sans-serif;
+  background-color: var(--color-bg);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 1rem 0rem;
+}
+.content {
+  color: #ffffff;
+  font-size:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: var(--color-text-header);
+  font-family:Roboto,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 300%;
+  line-height: 105%;
+  letter-spacing:2px;
+  margin:0;
+  margin-right:4%;
+  margin-left:4%;
+  cursor:pointer;
+  
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+h3{
+  translate:0px 90%;
+}
+.refere{
+  font-family:Roboto,sans-serif;
+  font-weight:bold;
+  font-size:20px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border-style:solid;
+  border-width:2px;
+  border-radius:20px;
+  margin-right:6%;
+  margin-left:6%;
+}
+.referetext{
+  font-family:Roboto,sans-serif;
+  font-weight:900;
+  font-size:20px;
+  color: #000000;
+  font-style:900;
+  background-color: #FFFFFF;
+  margin-left:5%;
+  margin-right:0;
+}
+.links{
+  color:#f000dd;
+  font-size:18px;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+button{
+  position:relative;
+  background:#FFFFFF;
+  border:none;
+  font-size:25px;
+  border-radius:4%;
+  width:120%;
+  max-width:100%;
+  cursor:pointer;
+  padding:10%;
+}
+.buttonbackground{
+  background:#BBBBBB;
+  border:none;
+  translate:0 4%;
+  border-radius:4%;
+  width:120%;
+  max-width:100%;
+  padding:10%;
+}
+button:hover{
+background:#CCCCCC;
+border-radius:3%;
+}
+.dipped{
+  z-index:1;
+  translate:0 4%;
+}
+
+hr {
+  color: #FFFFFF;
+  width: 90%
+  
+}
+h2 {
+  color: var(--color-text-header);
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+/* Links that open files in the editor */
+.fileopener {
+  cursor:pointer;
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
