@@ -132,21 +132,21 @@ function processMidiData(arrayBuffer, sourceName) {
         }); 
         bt2.addEventListener('click', () => {
 
-            playMidiFromUrl("https://cdn.glitch.global/ed71235e-3d50-4274-ba6d-3a373de72fad/Beethoven%20-%20Fur%20Elise.mid.mid?v=1747685881906","felise")
+            playMidiFromUrl("./Beethoven - Fur Elise.mid.mid","felise")
         }); 
       bt3.addEventListener('click', () => {
 
-            playMidiFromUrl("https://cdn.glitch.global/ed71235e-3d50-4274-ba6d-3a373de72fad/DOOM%202%20-Running%20From%20Evil.mid?v=1747685656141","rfevil")
+            playMidiFromUrl("DOOM 2 -Running From Evil.mid","rfevil")
       
         }); 
       bt4.addEventListener('click', () => {
 
-            playMidiFromUrl("https://cdn.glitch.global/ed71235e-3d50-4274-ba6d-3a373de72fad/Soft%20and%20Wet%20-%20Prince%20.mid?v=1747686196760","sandw")
+            playMidiFromUrl("./Soft and Wet - Prince.mid","sandw")
       
         }); 
       bt5.addEventListener('click', () => {
 
-            playMidiFromUrl("https://cdn.glitch.global/ed71235e-3d50-4274-ba6d-3a373de72fad/Mozart-Lacrimosa-requiem.mid?v=1747686578689","lacreq")
+            playMidiFromUrl("./Mozart-Lacrimosa-requiem.mid","lacreq")
       
         }); 
     } else {
