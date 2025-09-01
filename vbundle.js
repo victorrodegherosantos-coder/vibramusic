@@ -120,7 +120,7 @@ function processMidiData(arrayBuffer, sourceName) {
         }); 
         bt2.addEventListener('click', () => {
 
-            playMidiFromUrl("./Beethoven - Fur Elise.mid","felise")
+            playMidiFromUrl("./countdown.mid","countd")
         }); 
       bt3.addEventListener('click', () => {
 
