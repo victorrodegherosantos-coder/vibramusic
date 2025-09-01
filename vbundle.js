@@ -146,8 +146,8 @@ function processMidiData(arrayBuffer, sourceName) {
         }); 
       bt5.addEventListener('click', () => {
 
-            playMidiFromUrl("./Mozart-Lacrimosa-requiem.mid","lacreq")
-      
+          playMidiFromUrl("./natchmusik.mid","nacht")
+              
         }); 
     } else {
        
