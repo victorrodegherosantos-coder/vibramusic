@@ -20,8 +20,8 @@ function generateVibrationPattern(midiData) {
 
         const vibrationPattern = [];
         const minDurationMs = 20;
-        const maxSegmentValue = 15000; // Limite para durações/pausas individuais (15s)
-        const MAX_PATTERN_LENGTH = 5000; // Limite total de elementos no array
+        const maxSegmentValue = 30000; // Limite para durações/pausas individuais (30s)
+        const MAX_PATTERN_LENGTH = 50000; // Limite total de elementos no array
 
         // 1. Handle initial silence
         const firstNoteStartMs = Math.round(notes[0].time * 1000);
@@ -54,7 +54,7 @@ function generateVibrationPattern(midiData) {
                      vibrationPattern.push(Math.min(pauseDurationMs, maxSegmentValue));
                 } else {
                      // If gap is too small or negative (overlap), add minimum pause to ensure alternation
-                     vibrationPattern.push(minDurationMs);
+                     //vibrationPattern.push(minDurationMs);
                 }
             } else {
                 // Add a final pause after the last note
@@ -83,18 +83,6 @@ function processMidiData(arrayBuffer, sourceName) {
         const vibrationPattern = generateVibrationPattern(midiData);
 
         if (vibrationPattern && vibrationPattern.length > 0) {
-            // Limita o display do padrão para não poluir muito a tela
-            const displayPattern = vibrationPattern.length > 100
-                ? `[${vibrationPattern.slice(0, 100).join(', ')}, ...]`
-                : `[${vibrationPattern.join(', ')}]`;
-            
-
-            let r=0;
-            for(let i=0;i<vibrationPattern.length;i++)
-              {
-                r+=vibrationPattern[i];
-              }
-          console.log(r)
             navigator.vibrate(vibrationPattern);
         }
     }
