@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" href="./vb.ico"/>
     <title>VibraMusic</title>
-    <link rel="stylesheet" href="./style.css"/>
-        <script src="https://unpkg.com/@tonejs/midi"></script>
+    <link rel="stylesheet" href="./stylec.css"/>
+     
   </head>
   <body>
 
     <script src="./base.js" defer></script>
-    <script src="./vbundle.js"></script>
-
-    <div class="wrapper">
+	<script src="./compositor.js" defer></script>
 <p id="cabecalho">
-<img style="user-select:none;position:relative;top:0;left:0;width:15%;height:50%;" src="./vblogo.png">
+<img style="user-select:none;position:relative;top:0;left:0;width:10%;height:30%;" src="./vblogo.png">
            Compositor de arquivos .vib para o VIBRAMUSIC
-<hr>
         </p>
+		<hr>
+    <div class="wrapperc">
+
+		
       <div class="content" role="main">
 
         
 
-        <div>
+        <div id="testes">
           <h2>Testar a vibração</h2>
           <p>
             <hr>
             <button id="bt1" onmousedown="efeitodown('bt1')">
               Vibrar basico
             </button>
+			<hr>
+			<div class="wrapperseletorarquivos">
+			<button id="seletorarquivo">Carregar arquivo .vib</button>
+			<input type="file" id="seletorarquivob"  onmousedown="efeitodown('seletorarquivo')" accept=".vib"></input>
+			</div>
+			<hr>
+			<button id="compositorhref" onclick="location.href = './index.html'">Voltar</button>
             </p>
         
         
         </div>
+		
+		<div>
+          <h2>Compor</h2>
+		  <div id="botoes" style="display:flex;flex-direction: row; gap:5%;">
+		  <button id="tocar" onmousedown="efeitodown('tocar')">Tocar</button>
+		  <button id="insnota" onmousedown="efeitodown('insnota')">Inserir Nota</button>
+		  <button id="remnota" onmousedown="efeitodown('remnota')">Remover Nota</button>
+		  <button id="desfazer" onmousedown="efeitodown('desfazer')">Desfazer</button>
+		</div>
+		<hr style="position:relative;width:100%;">
+        <div id="caixavib">
+		
+        </div>
         
        
+	   
+	   
       </div>
     </div>
    
