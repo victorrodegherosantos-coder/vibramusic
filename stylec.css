@@ -1,0 +1,252 @@
+
+:root {
+  --color-bg: #51346b;
+  --color-text-main: #FFFFFF;
+  --color-text-header: #FFFFFF;
+  --color-primary: #FFFF00;
+  --wrapper-height: 100px;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "Roboto";
+  --font-family-header: "Roboto";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+body {
+  font-family: HK Grotesk,sans-serif;
+  background-color: var(--color-bg);
+  color: #ffffff;
+}
+
+
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 1rem 0rem;
+}
+.wrapperc {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: left;
+  margin: 1rem 0rem;
+  margin-right:80%;
+  margin-left:5%;
+}
+.content {
+  font-size:20px;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: center;
+  gap:15%;
+}
+
+
+/* Very light scaling for our illustration */
+.title {
+  color: var(--color-text-header);
+  font-family:Roboto,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 300%;
+  line-height: 105%;
+  letter-spacing:2px;
+  margin:0;
+  margin-right:4%;
+  margin-left:4%;
+  cursor:pointer;
+  
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+h3{
+  translate:0px 90%;
+}
+.refere{
+  font-family:Roboto,sans-serif;
+  font-weight:bold;
+  font-size:20px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border-style:solid;
+  border-width:2px;
+  border-radius:20px;
+  margin-right:6%;
+  margin-left:6%;
+}
+.referetext{
+  font-family:Roboto,sans-serif;
+  font-weight:900;
+  font-size:20px;
+  color: #000000;
+  font-style:900;
+  background-color: #FFFFFF;
+  margin-left:5%;
+  margin-right:0;
+}
+.links{
+  color:#f000dd;
+  font-size:18px;
+}
+
+/* Button - Add it from the README instructions */
+
+button{
+  position:relative;
+  background:#FFFFFF;
+  border:none;
+  font-size:25px;
+  border-radius:4%;
+  width:120%;
+  max-width:100%;
+  cursor:pointer;
+  padding:10%;
+}
+.buttonbackground{
+  background:#BBBBBB;
+  border:none;
+  translate:0 4%;
+  border-radius:4%;
+  width:120%;
+  max-width:100%;
+  padding:10%;
+}
+button:hover{
+background:#CCCCCC;
+border-radius:3%;
+}
+.dipped{
+  z-index:1;
+  translate:0 4%;
+}
+
+
+.wrapperseletorarquivos{
+position:relative;
+display:block;
+padding:0;
+width:120%;
+max-width:100%;
+
+}
+.seletorarquivo{
+  position:absolute;
+  background:#FFFFFF;
+  top:0;
+  left:0;
+  color:black;
+  border:none;
+  font-size:25px;
+  border-radius:4%;
+  width:100%;
+  height:100%;
+  cursor:pointer;
+  padding:10%;
+}
+.seletorarquivo:hover{
+background:#CCCCCC;
+border-radius:3%;
+}
+
+#seletorarquivob{
+opacity:0;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+cursor:pointer;
+z-index:1;
+}
+
+
+hr {
+  color: #FFFFFF;
+  width: 90%
+  
+}
+h2 {
+  color: var(--color-text-header);
+}
+
+#cabecalho{
+font-family:Roboto,sans-serif;
+font-weight:900;
+font-size:30px;
+display:flex;
+width:100%;
+height:80%;
+}
+#testes{
+	
+
+
+}
+
+#caixavib
+{
+background:black;
+height:10rem;
+width:100%;
+display:inline-block;
+position:absolute;
+border:solid;
+border-color:white;
+border-width:1%;
+border-radius:2%
+
+}
+
+
+.notavib{
+height:98%;
+width:40%;
+display:block;
+justify-content:center;
+top:1%;
+border:none;
+background:blue;
+border-radius:8%;
+position:absolute;
+z-index:2;
+cursor:grab;
+}
+.notavib:hover{
+border:solid;
+border-width:1%;
+border-color:red;
+}
+
+.pegasnotavib{
+position:absolute;
+height:30px;
+width:30px;
+top:35%;
+border:solid;
+border-width:5%;
+border-radius:25%;
+border-color:white;
+background:red;
+z-index:1;
+}
+.pegasnotavib:hover{
+background:yellow;
+}
