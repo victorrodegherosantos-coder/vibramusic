@@ -97,7 +97,6 @@ h3{
   font-size:18px;
 }
 
-/* Button - Add it from the README instructions */
 
 button{
   position:relative;
@@ -110,6 +109,19 @@ button{
   cursor:pointer;
   padding:10%;
 }
+
+.barrastatus{
+  position:relative;
+  background:#FFFFFF;
+  border:none;
+  color:black;
+  font-size:25px;
+  border-radius:4%;
+  width:120%;
+  max-width:100%;
+  padding:10%;
+}
+
 .buttonbackground{
   background:#BBBBBB;
   border:none;
