@@ -84,6 +84,7 @@ function processMidiData(arrayBuffer, sourceName) {
 
         if (vibrationPattern && vibrationPattern.length > 0) {
             navigator.vibrate(vibrationPattern);
+			emularvib(vibrationPattern);
         }
     }
      async function playMidiFromUrl(url, songName) {
@@ -112,15 +113,18 @@ function processMidiData(arrayBuffer, sourceName) {
     const bt5 = document.getElementById('bt5');
     const buttons = [bt1,bt2,bt3, bt4,bt5];
 
+
+	
     if ('vibrate' in navigator) {
        
         bt1.addEventListener('click', () => {
             console.log('Vibrando por 200ms...');
             navigator.vibrate([200,200]);
+			emularvib([200,200]);
         }); 
         bt2.addEventListener('click', () => {
 
-            playMidiFromUrl("./countdown.mid","countd")
+            playMidiFromUrl("countdown.mid","countd")
         }); 
       bt3.addEventListener('click', () => {
 
